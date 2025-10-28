@@ -1,0 +1,5 @@
+/* 1.) Create block for <p> */
+p {
+  margin: 20px; /* top/bottom | left/right */
+  padding: 0;
+}

@@ -79,3 +79,27 @@ Never clone inside an existing repo — it creates a nested repo and breaks the 
 - Floating elements
 - Flexbox & Grid layouts
 - Media queries
+
+### The Box Model
+
+At the core of every HTML element lies the **content area** — where your actual content (text, images, etc.) is displayed. Surrounding this content are three distinct layers:
+
+- **Padding**: Creates space between the content and the border
+- **Border**: A visible line that wraps around the element
+- **Margin**: Adds space outside the border, separating elements from each other
+
+#### Margin Collapsing
+
+When two vertical margins meet, they **collapse** into a single margin equal to the larger of the two values. This prevents excessive spacing between stacked elements and maintains consistent vertical rhythm in your layouts.
+
+**Example:**
+
+```css
+.element-1 {
+  margin-bottom: 20px;
+}
+.element-2 {
+  margin-top: 30px;
+}
+/* Result: 30px gap between elements (not 50px) */
+```
