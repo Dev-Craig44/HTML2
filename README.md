@@ -66,3 +66,16 @@ Never clone inside an existing repo — it creates a nested repo and breaks the 
 - Basic CSS properties
 - CSS selectors & pseudo-classes
 - Chrome DevTools
+
+## 1. Layouts
+
+### Intro
+
+- CSS Box Model
+- Sizing elements
+- Overflowing
+- Measurement units
+- Positioning elements
+- Floating elements
+- Flexbox & Grid layouts
+- Media queries
