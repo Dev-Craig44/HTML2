@@ -59,3 +59,10 @@ Learn advanced HTML &amp; CSS to build clean, modern web pages. Topics include r
 **🧠 Quick Tip:**  
 Always run `git clone` _one level above_ your target folder.  
 Never clone inside an existing repo — it creates a nested repo and breaks the workflow.
+
+## What You Need To Know
+
+- Basic HTML elements
+- Basic CSS properties
+- CSS selectors & pseudo-classes
+- Chrome DevTools
