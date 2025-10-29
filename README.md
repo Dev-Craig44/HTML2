@@ -104,16 +104,66 @@ When two vertical margins meet, they **collapse** into a single margin equal to 
 /* Result: 30px gap between elements (not 50px) */
 ```
 
-## Sizing Elements
+### Sizing Elements
 
-- We made a box classed "box" in the HTML file.
-- The box has a fixed width and height of 100px.
-- The box has a gold background color.
-- One thing people might not know is when you add padding or border to an element, it increases the total size of that element beyond the specified width and height.
-- By default, the width and height only account for the content area, not including padding, border, or margin.
-- The margin does not affect the size of the element itself; it only adds space outside the element.
-- box sizing property comes to the rescue! Because it allows us to change the default box model behavior.
-- Theres a problem though, we don't apply this to every single element on the page. What if you have another element with the class of product, we don't repeat the same box sizing code again.
-- To fix this, we can use the universal selector (\*) to apply box-sizing: border-box; to all elements on the page.
-- The width and height properties are only applied to block level elements. Inline elements ignore these properties.
-- If you want to set width and height on inline elements, you need to change their display property to inline-block or block.
+When working with CSS, understanding how element sizing works is crucial for creating predictable layouts.
+
+#### Default Box Model Behavior
+
+By default, the `width` and `height` properties only apply to an element's **content area**. When you add `padding` or `border`, these values are added to the specified dimensions, making the element larger than intended.
+
+**Example:**
+
+```css
+.box {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 2px solid black;
+  background-color: gold;
+}
+/* Total size: 124px × 124px (100 + 20 + 4) */
+```
+
+#### The box-sizing Solution
+
+The `box-sizing` property allows you to control how the box model calculates an element's total size:
+
+```css
+.box {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 2px solid black;
+}
+/* Total size remains: 100px × 100px */
+```
+
+#### Universal Box-Sizing Reset
+
+Rather than applying `box-sizing` to individual elements, use the universal selector to apply it globally:
+
+```css
+* {
+  box-sizing: border-box;
+}
+```
+
+This ensures consistent sizing behavior across all elements on your page.
+
+#### Sizing Limitations with Inline Elements
+
+The `width` and `height` properties only work on **block-level** elements. Inline elements ignore these properties entirely.
+
+To size inline elements, change their display property:
+
+```css
+.inline-element {
+  display: inline-block; /* or block */
+  width: 200px;
+  height: 50px;
+}
+```
+
+**Note:** Margins do not affect an element's actual size — they only add space around it.
