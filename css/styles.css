@@ -8,6 +8,10 @@
   margin-right: 0.5rem;
 }
 
+.tweet {
+  border: 3px solid lightgray;
+}
+
 /* 3.) Create a clear fix for the floated elements to push the text down below the avatar */
 .clear {
   /* 4.) Set clear to left because we have a floated element on the left */
