@@ -167,3 +167,20 @@ To size inline elements, change their display property:
 ```
 
 **Note:** Margins do not affect an element's actual size — they only add space around it.
+
+### Overflowing
+
+When an element's content exceeds its defined size, it can overflow its container. The `overflow` property controls how this excess content is handled.
+
+- **Visible** (default): Content spills out of the container.
+- **Hidden**: Excess content is clipped and not visible.
+- **Scroll**: Adds scrollbars to view the overflowing content.
+- **Auto**: Adds scrollbars only when necessary.
+
+If we wanted to hid the content on the horizontal axis but allow scrolling on the vertical axis, we could use:
+
+```css
+.box {
+  overflow: hidden scroll;
+}
+```
