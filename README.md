@@ -222,4 +222,6 @@ CSS provides several positioning schemes to control the layout of elements on a 
 - **Relative**: Positioned relative to its normal position
 - **Absolute**: Positioned relative to the nearest positioned ancestor
 - **Fixed**: Positioned relative to the viewport, stays in place on scroll
-- **Sticky**: Switches between relative and fixed based on scroll position
+- **Sticky**: Switches between relative and fixed based on scroll positions
+
+- When we moved the box using absolute positioning, the blue box moved to the top-left corner of the container because using absolute positioning the element is removed from the normal document flow, from the parents view, that element doesn't even exist.
