@@ -1,3 +1,9 @@
+/* 6.) Give the body 200vh height and 10px margin */
+body {
+  height: 200vh;
+  margin: 10px;
+}
+
 /* 2.)Make boxes have aboarder 3px solid lightgrey */
 .boxes {
   border: 3px solid lightgrey;
@@ -17,14 +23,17 @@
 }
 .box-two {
   background-color: tomato;
-  /* 4.) Change the position of this box to absolute */
-  position: absolute;
-  /* Set bottom to 0 and right to 0 */
-  bottom: 0;
-  right: 0;
+  /* 4.) Change the position of this box to fixed */
+  position: fixed;
+  /* 7.) use left and right to put 2rem space on each side */
+  top: 0;
+  left: 2rem;
+  right: 2rem;
   /* 5.) The z-index is used to stack elements on top of each other. Default is 0, and you can think of it as the "depth" of the element. */
   /* When you increase the z-index it will make element closer to you. if you set it to a negative number it will move it further away. */
-  z-index: -1;
+  /* 8.) If we set width to auto, the browser will decide how much space the element takes up based on its content. */
+  width: auto;
+  z-index: 0;
 }
 .box-three {
   background-color: dodgerblue;
