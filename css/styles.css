@@ -12,8 +12,17 @@
   border: 3px solid lightgray;
 }
 
-/* 3.) Create a clear fix for the floated elements to push the text down below the avatar */
-.clear {
-  /* 4.) Set clear to left because we have a floated element on the left */
+/* With this code we're basically add the div dynamically without messing up our markup */
+/* 7.) We want to add a pseudo-element to the tweet container for clearing the float */
+.tweet::after {
+  content: "";
+  /* 8.) This is element by default is a inline element so we need to make it block */
+  display: block;
   clear: both;
 }
+
+/* 3.) Create a clear fix for the floated elements to push the text down below the avatar */
+/* .clear {
+  /* 4.) Set clear to left because we have a floated element on the left */
+/* clear: both; 
+} */
