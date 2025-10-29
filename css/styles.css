@@ -10,6 +10,8 @@
 
 .tweet {
   border: 3px solid lightgray;
+  /* 9.) Set overflow to any value other than visible. We can set it to auto, but the problem with auto is that it can create a scrollbar if the content is too large. Alternatively, we can set it to hidden, but also with hidden, some content may get clipped */
+  overflow: hidden;
 }
 
 /* With this code we're basically add the div dynamically without messing up our markup */

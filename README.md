@@ -225,3 +225,9 @@ CSS provides several positioning schemes to control the layout of elements on a 
 - **Sticky**: Switches between relative and fixed based on scroll positions
 
 - When we moved the box using absolute positioning, the blue box moved to the top-left corner of the container because using absolute positioning the element is removed from the normal document flow, from the parents view, that element doesn't even exist.
+
+### Floating Elements
+
+The `float` property allows elements to be taken out of the normal document flow and positioned to the left or right of their container, allowing other content to wrap around them.
+
+There's a problem with floats called parent collapse. When all child elements inside a parent are floated, the parent element collapses to a height of zero because it no longer contains any non-floated content.
