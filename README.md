@@ -103,3 +103,17 @@ When two vertical margins meet, they **collapse** into a single margin equal to 
 }
 /* Result: 30px gap between elements (not 50px) */
 ```
+
+## Sizing Elements
+
+- We made a box classed "box" in the HTML file.
+- The box has a fixed width and height of 100px.
+- The box has a gold background color.
+- One thing people might not know is when you add padding or border to an element, it increases the total size of that element beyond the specified width and height.
+- By default, the width and height only account for the content area, not including padding, border, or margin.
+- The margin does not affect the size of the element itself; it only adds space outside the element.
+- box sizing property comes to the rescue! Because it allows us to change the default box model behavior.
+- Theres a problem though, we don't apply this to every single element on the page. What if you have another element with the class of product, we don't repeat the same box sizing code again.
+- To fix this, we can use the universal selector (\*) to apply box-sizing: border-box; to all elements on the page.
+- The width and height properties are only applied to block level elements. Inline elements ignore these properties.
+- If you want to set width and height on inline elements, you need to change their display property to inline-block or block.

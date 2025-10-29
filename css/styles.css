@@ -1,5 +1,28 @@
-/* 1.) Create block for <p> */
-p {
-  margin: 20px; /* top/bottom | left/right */
-  padding: 0;
+/* 4.) Use `*` to apply box-sizing to all elements */
+/* Problem with this universal selector is that it doesn't apply to pseudo-elements */
+/* To fix this, we need to extend it to ::before and ::after pseudo-elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.box::before {
+  content: "Hello";
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  /* 1.) Add padding and border to show that our box is larger than 100x100 */
+  /* padding: 20px;
+  border: 5px solid black; */
+  /* 2.) Set margin to show that it wont affect the size */
+  /* margin: 20px; */
+  /* 3.) Use box-sizing property and border-box value to include padding and border in the element's total width and height */
+  /* box-sizing: border-box; */
+  /* 5.) Set display property to inline-block to allow width and height to be applied */
+  display: inline-block;
+  /* Because we have a couple spaces in between the span elements code in the HTML file it will show up in the html, so you would need to remove the spaces between the elements */
 }
