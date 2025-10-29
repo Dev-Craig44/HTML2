@@ -213,3 +213,13 @@ Relative units adapt to different screen sizes and user settings:
 - **`ch`**: Relative to the width of the "0" character, useful for controlling text width
 
 **Key Takeaway**: The choice between `px`, `em`, or `rem` depends on the specific problem you're solving, not rigid rules.
+
+### Positioning
+
+CSS provides several positioning schemes to control the layout of elements on a webpage:
+
+- **Static** (default): Elements flow naturally in the document
+- **Relative**: Positioned relative to its normal position
+- **Absolute**: Positioned relative to the nearest positioned ancestor
+- **Fixed**: Positioned relative to the viewport, stays in place on scroll
+- **Sticky**: Switches between relative and fixed based on scroll position
