@@ -184,3 +184,32 @@ If we wanted to hid the content on the horizontal axis but allow scrolling on th
   overflow: hidden scroll;
 }
 ```
+
+### Measurement Units
+
+CSS offers various units to define sizes, each serving different purposes:
+
+#### Absolute Units
+
+- **`px` (pixels)**: Fixed size, best for screen elements
+- **`cm`, `mm`, `in`**: Physical measurements, rarely used in web design
+
+#### Relative Units
+
+Relative units adapt to different screen sizes and user settings:
+
+- **`%` (percentage)**: Relative to the parent element's size
+- **`em`**: Relative to the element's font size
+  - ⚠️ **Issue**: Can compound in nested elements if font size isn't explicitly set
+- **`rem`**: Relative to the root element's font size (usually `<html>`)
+  - 💡 **Pro tip**: Set `html { font-size: 62.5%; }` so 1rem = 10px for easier calculations
+- **`vw`, `vh`**: Relative to viewport dimensions
+  - `1vw` = 1% of viewport width
+  - `1vh` = 1% of viewport height
+
+#### Flexible Units
+
+- **`fr`**: Fractional unit for CSS Grid layouts to allocate space proportionally
+- **`ch`**: Relative to the width of the "0" character, useful for controlling text width
+
+**Key Takeaway**: The choice between `px`, `em`, or `rem` depends on the specific problem you're solving, not rigid rules.
