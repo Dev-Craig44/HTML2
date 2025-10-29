@@ -13,8 +13,8 @@
 }
 
 /* With this code we're basically add the div dynamically without messing up our markup */
-/* 7.) We want to add a pseudo-element to the tweet container for clearing the float */
-.tweet::after {
+/* 7.) Change the class name to "clearfix" so we can reuse it  */
+.clearfix::after {
   content: "";
   /* 8.) This is element by default is a inline element so we need to make it block */
   display: block;
