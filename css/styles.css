@@ -1,0 +1,15 @@
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  background-color: gold;
+  /* 1.) Set float to left so that the text wraps around the avatar */
+  float: left;
+  /* 2.) Add some margin to the right for spacing */
+  margin-right: 0.5rem;
+}
+
+/* 3.) Create a clear fix for the floated elements to push the text down below the avatar */
+.clear {
+  /* 4.) Set clear to left because we have a floated element on the left */
+  clear: both;
+}
