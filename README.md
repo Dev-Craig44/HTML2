@@ -257,3 +257,11 @@ If you set the direction to column, the main axis becomes vertical and the cross
   - `center`: Items are centered along the cross axis
   - `stretch`: Items stretch to fill the container along the cross axis
 - **align-content**: This only works if we have multiple lines in our flex container. It aligns the lines of items along the cross axis.
+
+#### Sizing items
+
+- **flex-basis**: The initial size of a flex item before any space distribution
+- **flex-grow**: Defines how much a flex item will grow relative to the rest of the flex items
+- **flex-shrink**: Defines how much a flex item will shrink relative to the rest of the flex items
+- **flex**: A shorthand property for `flex-grow`, `flex-shrink`, and `flex-basis`
+- All of these should be applied to the flex items, not the flex container.
