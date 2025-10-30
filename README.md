@@ -231,3 +231,29 @@ CSS provides several positioning schemes to control the layout of elements on a 
 The `float` property allows elements to be taken out of the normal document flow and positioned to the left or right of their container, allowing other content to wrap around them.
 
 There's a problem with floats called parent collapse. When all child elements inside a parent are floated, the parent element collapses to a height of zero because it no longer contains any non-floated content.
+
+### Flexbox
+
+Flexbox is a one-dimensional layout model that allows you to design flexible and responsive layout structures. It works by defining a flex container and its flex items.
+
+Axes:
+
+- **Main Axis**: The primary axis along which flex items are laid out (default is horizontal).
+- **Cross Axis**: The axis perpendicular to the main axis (default is vertical).
+
+If you set the direction to column, the main axis becomes vertical and the cross axis becomes horizontal. If you set the direction to row, the main axis is horizontal and the cross axis is vertical.
+
+#### Aligning Items
+
+- **justify-content**: Aligns items along the main axis
+  - `flex-start`: Items are packed toward the start of the main axis
+  - `flex-end`: Items are packed toward the end of the main axis
+  - `center`: Items are centered along the main axis
+  - `space-between`: Items are evenly distributed, with the first item at the start and the last item at the end
+  - `space-around`: Items are evenly distributed with equal space around them
+- **align-items**: Aligns items along the cross axis
+  - `flex-start`: Items are aligned to the start of the cross axis
+  - `flex-end`: Items are aligned to the end of the cross axis
+  - `center`: Items are centered along the cross axis
+  - `stretch`: Items stretch to fill the container along the cross axis
+- **align-content**: This only works if we have multiple lines in our flex container. It aligns the lines of items along the cross axis.

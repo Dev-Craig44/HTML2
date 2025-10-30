@@ -1,0 +1,28 @@
+body {
+  margin: 10px;
+}
+
+.container {
+  border: 2px solid lightgrey;
+  /* 1.) To lay out the boxes in a row we can use flexbox */
+  display: flex;
+  flex-direction: row;
+  /* 2.) Set justify-content */
+  justify-content: center;
+  /* 3.) Set align-items */
+  /* This won't do anything because the container is not tall enough, it's only as tall as the boxes */
+  align-items: center;
+  /* 4.) Set the height to 90vh */
+  height: 90vh;
+  /* 5.) Because everything wants to fit on one line our boxes get smaller as we add more boxes. To fix this we can use flex-wrap */
+  flex-wrap: wrap;
+  /* 6.) Here's where content alignment comes into play */
+  align-content: center;
+}
+
+.box {
+  width: 5rem;
+  height: 5rem;
+  background-color: gold;
+  margin: 1rem;
+}
