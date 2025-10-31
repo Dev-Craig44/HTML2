@@ -265,3 +265,53 @@ If you set the direction to column, the main axis becomes vertical and the cross
 - **flex-shrink**: Defines how much a flex item will shrink relative to the rest of the flex items
 - **flex**: A shorthand property for `flex-grow`, `flex-shrink`, and `flex-basis`
 - All of these should be applied to the flex items, not the flex container.
+
+### Grid
+
+CSS Grid is a two-dimensional layout system that allows you to create complex grid-based designs with rows and columns.
+
+Previously we were laying out elements in one direction, either a row or a column. With grid we can layout elements in both directions, rows and columns, at the same time.
+
+#### Defining the Grid
+
+- First, we define a grid container by setting `display: grid` on a parent element.
+- Then we're going to use these two properties to define the number of rows and columns in our grid:
+  - `grid-template-columns`: Defines the number and size of columns
+  - `grid-template-rows`: Defines the number and size of rows
+
+If we go to chrome devtools and click the layout tab, we can change the options to see the grid lines, areas, and gaps.
+
+#### Aligning Items
+
+- **justify-items**: Aligns items along the row (horizontal) axis
+  - `start`: Items are aligned to the start of the row axis
+  - `end`: Items are aligned to the end of the row axis
+  - `center`: Items are centered along the row axis
+  - `stretch`: Items stretch to fill the grid cell along the row axis
+- **align-items**: Aligns items along the column (vertical) axis
+
+  - `start`: Items are aligned to the start of the column axis
+  - `end`: Items are aligned to the end of the column axis
+  - `center`: Items are centered along the column axis
+  - `stretch`: Items stretch to fill the grid cell along the column axis
+
+- So if you see the word `content` that represents the size of the entire grid the entire content. But if you see the word `item` that represents the size of an individual grid item inside of a grid cell.
+
+- You would want to use fr instead of percentages because fr will take up the available space after any fixed sizes have been allocated, percentage will always be a percentage of the total size regardless of any fixed sizes.
+
+#### Gaps
+
+- **row-gap**: The space between rows in a grid layout.\*\*
+- **column-gap**: The space between columns in a grid layout.
+- **grid-area**: A shorthand property that allows you to specify a grid item's start and end positions within the grid, using line numbers or named grid areas.
+
+#### Placing Items
+
+- **grid-column**: Specifies the starting and ending column lines for a grid item.
+- **grid-row**: Specifies the starting and ending row lines for a grid item.
+- **grid-area**: A shorthand property that allows you to specify a grid item's start and end positions within the grid, using line numbers or named grid areas.
+
+#### Placing Items In Named Areas
+
+- You can name areas of your grid using the `grid-template-areas` property on the grid container.
+- Then you can place individual grid items into these named areas using the `grid-area` property on the grid items.

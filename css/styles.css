@@ -1,3 +1,69 @@
 body {
   margin: 10px;
 }
+
+.container {
+  /* 2.) Set display prop to grid */
+  display: grid;
+
+  /* Let's say we want to make a 3 X 2 grid */
+  /* 3.) Make each row 100px tall */
+  /* grid-template-rows: repeat(3, 100px); */
+
+  /* 4.) Make the two columns 100px wide. Use the repeat() function so we only have to change the code in one place */
+  /* grid-template-columns: repeat(2, 100px); */
+
+  /* 6.) We have another property grid-template which is a shorthand for grid-template-rows and grid-template-columns */
+  grid-template: 100px auto 100px / 30fr 70fr;
+
+  /* 17.) Define grid areas */
+  /* 19.) Make a box in the footer empty using the `.`  */
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    ". footer";
+
+  /* 14.) Set row-gap */
+  row-gap: 10px;
+  /* 15.) Set column-gap */
+  column-gap: 10px;
+
+  /* 5.) Create a border 3px solid lightgray*/
+  border: 3px solid lightgray;
+
+  /* 9.) Align the items along the center */
+  /* justify-items: center; */
+
+  /* 10.) Align the items along the center */
+  /* align-items: center; */
+
+  /* 11.) Now justify the content in this case will also center the items */
+  /* justify-content: center; */
+  /* justify-content: stretch; */
+
+  /* 12.) Now align the content in the center */
+  /* align-content: stretch; */
+
+  /* 13.) Add space vertically */
+  height: 100vh;
+}
+
+/* 8.) Define our boxes */
+.box {
+  /* width: 5rem; */
+  /* height: 5rem; */
+  background-color: gold;
+}
+
+.box-one {
+  grid-area: header;
+  /* 15.) Make this box stretch from line 1 to 3 */
+  /* grid-column: 1 / 3; */
+  /* 16.) Also we can make this box appear on the second row */
+  /* grid-row: 2 / 4; */
+}
+
+/* 18.) Make box four the footer */
+.box-four {
+  grid-area: footer;
+}
