@@ -315,3 +315,8 @@ If we go to chrome devtools and click the layout tab, we can change the options 
 
 - You can name areas of your grid using the `grid-template-areas` property on the grid container.
 - Then you can place individual grid items into these named areas using the `grid-area` property on the grid items.
+
+### Hiding Elements
+
+- **visibility: hidden**: Hides the element but it still takes up space in the layout.
+- **display: none**: Completely removes the element from the layout, and it does not take up any space.
