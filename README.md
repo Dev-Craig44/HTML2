@@ -320,3 +320,16 @@ If we go to chrome devtools and click the layout tab, we can change the options 
 
 - **visibility: hidden**: Hides the element but it still takes up space in the layout.
 - **display: none**: Completely removes the element from the layout, and it does not take up any space.
+
+### Media Queries
+
+Media queries allow you to apply different styles based on the characteristics of the device or viewport, such as its width, height, resolution, or orientation.
+
+#### Responsive Design
+
+- Desktop first approach: Start with styles for larger screens and use media queries to adjust for smaller screens.
+- Mobile first approach: Start with styles for smaller screens and use media queries to enhance for larger. **Majority of developers prefer this approach.**
+
+#### Devtools tip
+
+- You can simulate different device screen sizes using Chrome DevTools by pressin option + command + I (Mac) or control + shift + I (Windows), then clicking the device toolbar icon (phone/tablet) in the top-left corner of DevTools.
