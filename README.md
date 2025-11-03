@@ -333,3 +333,184 @@ Media queries allow you to apply different styles based on the characteristics o
 #### Devtools tip
 
 - You can simulate different device screen sizes using Chrome DevTools by pressin option + command + I (Mac) or control + shift + I (Windows), then clicking the device toolbar icon (phone/tablet) in the top-left corner of DevTools.
+
+### Summary
+
+#### Key Concepts
+
+**Box Model**
+
+- When rendering an HTML document, the browser puts each element inside a box containing four areas: content area, padding area, border area, and margin area
+- Padding is the space between the border and content area
+- Margin is the space outside of an element and should be used to separate elements from each other
+- Margin collapsing happens when top and bottom margins of elements are combined into a single margin equal to the largest of the two margins
+
+**Element Types**
+
+- **Block-level elements**: Always start on a new line and take up the entire available horizontal space (e.g., `<p>`, `<div>`)
+- **Inline elements**: Don't start on a new line and take up only necessary width (e.g., `<span>`, `<a>`, `<img>`)
+
+**Sizing Elements**
+
+- Width and height properties have no effect on inline elements
+- To size an inline element, set its `display` property to `inline-block`
+- By default, width and height are applied to the content box, so paddings and borders increase the visible box size
+- Change this behavior by setting `box-sizing: border-box`
+
+**Positioning**
+
+- **Static** (default): Normal document flow
+- **Relative**: Position relative to element's normal position
+- **Absolute**: Position relative to positioned parent
+- **Fixed**: Position relative to viewport
+
+**Layout Systems**
+
+- **FlexBox**: One-dimensional layout (row or column) - great for navigation menus
+- **Grid Layout**: Two-dimensional grid system - ideal for major page areas, photo galleries
+- **Floating**: Pushes elements left or right, other elements flow around them
+
+**Responsive Design**
+
+- Media queries provide different styles for different devices based on features like screen size
+- Combine media queries with relative units to build responsive websites that adjust to various screen sizes
+
+#### CSS Cheat Sheet
+
+##### Box Model
+
+```css
+padding: 10px 20px;
+padding-top: 30px;
+margin: 1px 2px 3px 4px;
+margin-top: 5px;
+border: 1px solid black;
+border-top: 1px solid black;
+```
+
+##### Sizing Elements
+
+```css
+width: 5rem;
+height: 20%;
+box-sizing: border-box; /* Prevents paddings/borders from increasing visible box size */
+```
+
+##### Overflow
+
+```css
+overflow: hidden; /* Hides overflown content */
+overflow: scroll; /* Always shows scroll bars */
+overflow: auto; /* Shows scroll bars only if content overflows */
+```
+
+##### Positioning
+
+```css
+position: static; /* Default value */
+position: relative; /* Position relative to element's normal position */
+position: absolute; /* Position relative to positioned parent */
+position: fixed; /* Position relative to viewport */
+z-index: 1; /* Change stacking order */
+```
+
+##### Floating
+
+```css
+float: left;
+float: right;
+clear: both;
+```
+
+##### FlexBox
+
+**Container Properties:**
+
+```css
+display: flex;
+flex-direction: column; /* Direction (row, column) */
+justify-content: center; /* Align items along main axis */
+align-items: center; /* Align items along cross axis */
+flex-wrap: wrap; /* Enable wrapping */
+align-content: center; /* Align flex lines along cross axis */
+```
+
+**Item Properties:**
+
+```css
+align-self: center; /* Overwrite alignment */
+flex-basis: 10rem; /* Initial size of item */
+flex-grow: 1; /* Growth factor */
+flex-shrink: 0; /* Shrink factor */
+flex: 0 1 10rem; /* Shorthand (grow shrink basis) */
+```
+
+##### Grid
+
+**Defining Grid:**
+
+```css
+display: grid;
+grid-template-rows: repeat(3, 100px);
+grid-template-columns: repeat(2, 100px);
+grid-template: repeat(3, 100px) / repeat(2, 100px);
+grid-template-areas:
+  "header   header"
+  "sidebar  main"
+  "footer   footer";
+```
+
+**Gaps:**
+
+```css
+row-gap: 10px;
+column-gap: 20px;
+gap: 10px 20px; /* Shorthand (row column) */
+```
+
+**Alignment:**
+
+```css
+justify-items: center; /* Align items horizontally within their cell */
+align-items: center; /* Align items vertically within their cell */
+justify-content: center; /* Align grid horizontally within container */
+align-content: center; /* Align grid vertically within container */
+```
+
+**Placing Items:**
+
+```css
+grid-column: 2;
+grid-column: 1 / 3; /* Span from line 1 to 3 */
+grid-column: 1 / -1; /* Span full width */
+grid-column: 1 / span 2; /* Span 2 columns */
+grid-row: 2 / 4;
+grid-area: header; /* Use named area */
+```
+
+##### Hiding Elements
+
+```css
+display: none; /* Hides element completely */
+visibility: hidden; /* Hides element but keeps reserved space */
+```
+
+##### Media Queries
+
+```css
+@media screen and (min-width: 500px) {
+}
+@media screen and (min-width: 500px) and (max-width: 700px) {
+}
+@media print {
+}
+```
+
+---
+
+**💡 Key Takeaways:**
+
+- Floated elements are invisible to their parent (collapsing parent) - clear floated elements to fix layout issues
+- FlexBox is perfect for one-dimensional layouts
+- Grid is ideal for two-dimensional layouts
+- Media queries + relative units = responsive design
