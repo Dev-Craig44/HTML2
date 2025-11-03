@@ -1,0 +1,84 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* Mobile-first approach: Start with mobile styles */
+.navbar {
+    background-color: #333;
+    padding: 1rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-item {
+    width: 100%;
+    text-align: center;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #555;
+}
+
+/* Demo content styles */
+.content {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content h1 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.content p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+/* Tablets and wider screens (768px and up) */
+@media screen and (min-width: 768px) {
+    .navbar {
+        padding: 1rem 2rem;
+    }
+    
+    .nav-list {
+        flex-direction: row;
+        justify-content: flex-end; /* Push items to the right */
+        align-items: center;
+        gap: 0;
+    }
+    
+    .nav-item {
+        width: auto;
+        text-align: left;
+    }
+    
+    .nav-link {
+        display: inline-block;
+        margin-left: 1rem;
+    }
+}

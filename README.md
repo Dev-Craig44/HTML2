@@ -514,3 +514,53 @@ visibility: hidden; /* Hides element but keeps reserved space */
 - FlexBox is perfect for one-dimensional layouts
 - Grid is ideal for two-dimensional layouts
 - Media queries + relative units = responsive design
+
+---
+
+## Exercises
+
+### 🧭 Navigation Bar
+
+**Objective**: Create a responsive navigation bar that adapts to different screen sizes.
+
+**Requirements**:
+
+- **Mobile**: Items stacked vertically, center-aligned
+- **Tablets (768px+)**: Items displayed horizontally, right-aligned
+- **Approach**: Mobile-first responsive design
+
+**Features Implemented**:
+
+- Semantic HTML with `<nav>` and `<ul>` structure
+- FlexBox layout for responsive behavior
+- Smooth hover transitions
+- Clean, accessible design
+
+**View**: [Navigation Bar Exercise](exercises/navbar/index.html)
+
+### 📸 Photo Gallery
+
+**Objective**: Build a responsive photo gallery with adaptive column layouts.
+
+**Requirements**:
+
+- **Mobile**: Single column layout
+- **Tablets (768px+)**: Two column grid
+- **Laptops (1024px+)**: Three column grid with featured large image
+
+**Features Implemented**:
+
+- CSS Grid layout system
+- Responsive image handling with `object-fit: cover`
+- Random Unsplash images with cache-busting
+- Hover effects and smooth transitions
+- Mobile-first approach
+
+**View**: [Photo Gallery Exercise](exercises/photo-gallery/index.html)
+
+### 🎯 How to Test
+
+1. **Start Local Server**: `python3 -m http.server 8080`
+2. **Open**: [http://localhost:8080/exercises/](http://localhost:8080/exercises/)
+3. **Use DevTools**: F12 → Device toolbar → Test different screen sizes
+4. **Key Breakpoints**: 320px (mobile), 768px (tablet), 1024px (desktop)

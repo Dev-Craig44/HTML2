@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout Exercises</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        padding: 2rem;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .exercise-list {
+        list-style: none;
+        margin-top: 2rem;
+      }
+
+      .exercise-item {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border-left: 4px solid #007bff;
+      }
+
+      .exercise-item h2 {
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+
+      .exercise-item p {
+        color: #666;
+        margin-bottom: 1rem;
+      }
+
+      .exercise-link {
+        display: inline-block;
+        background: #007bff;
+        color: white;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+      }
+
+      .exercise-link:hover {
+        background: #0056b3;
+      }
+
+      .tips {
+        background: #e7f3ff;
+        padding: 1rem;
+        border-radius: 5px;
+        margin-top: 2rem;
+      }
+
+      .tips h3 {
+        color: #0066cc;
+        margin-bottom: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS Layout Exercises</h1>
+      <p>
+        Practice responsive design with these hands-on exercises. Use Chrome
+        DevTools to test different screen sizes!
+      </p>
+
+      <ul class="exercise-list">
+        <li class="exercise-item">
+          <h2>🧭 Navigation Bar</h2>
+          <p>
+            Build a responsive navigation bar that stacks vertically on mobile
+            and displays horizontally on tablets and larger screens.
+          </p>
+          <a href="exercises/navbar/index.html" class="exercise-link"
+            >View Navigation Bar</a
+          >
+        </li>
+
+        <li class="exercise-item">
+          <h2>📸 Photo Gallery</h2>
+          <p>
+            Create a responsive photo gallery with 1 column on mobile, 2 columns
+            on tablets, and a special 3-column layout with a large featured
+            image on desktop.
+          </p>
+          <a href="exercises/photo-gallery/index.html" class="exercise-link"
+            >View Photo Gallery</a
+          >
+        </li>
+      </ul>
+
+      <div class="tips">
+        <h3>💡 Testing Tips</h3>
+        <ul>
+          <li>
+            Use <strong>Chrome DevTools</strong> (F12) → Click device toolbar
+            icon
+          </li>
+          <li>
+            Test breakpoints: Mobile (320px), Tablet (768px), Desktop (1024px+)
+          </li>
+          <li>Both exercises use the <strong>mobile-first approach</strong></li>
+          <li>Watch how layouts transform at different screen sizes</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
