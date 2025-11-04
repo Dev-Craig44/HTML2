@@ -585,3 +585,32 @@ The art of creating beautiful, and easy-to-read text.
   - Monospace: Fonts in which each character takes up the same amount of horizontal space `(e.g., Courier New, Consolas, Ubuntu)`
 
 These are what we would call web-safe fonts. These are fonts that are commonly installed on most devices.
+
+### Embedding Web Fonts
+
+#### Where to find fonts?
+
+**Free Font Resources:**
+
+- [Font Squirrel](https://www.fontsquirrel.com) - High-quality free fonts with web font kits
+- [Google Fonts](https://fonts.google.com) - Extensive library of open-source fonts
+
+**Premium Font Resources:**
+
+- [Fonts.com](https://www.fonts.com) - Professional font licensing and web fonts
+- [MyFonts](https://www.myfonts.com) - Large marketplace for premium typefaces
+- [Adobe Fonts](https://fonts.adobe.com) - Included with Creative Cloud subscriptions
+
+#### Font Formats
+
+- **TTF**: TrueType Font, widely supported but larger file size
+- **OTF**: OpenType Font, supports advanced typographic features
+- **EOT**: Embedded OpenType, compact format for web use
+- **WOFF**: Web Open Font Format, optimized for web with compression (recommended)
+- **WOFF2**: Improved version of WOFF with better compression (best choice)
+
+**💡 Recommendation**: Use WOFF and WOFF2 formats for web fonts as they are more compressed and optimized for web use, resulting in faster loading times.
+
+When we download the font zips from sites like Font Squirrel, we're going to use the webfont generator to create the webfont files we need.
+
+Upload the font files you have (TTF or OTF) to the webfont generator, select optimized for web, and download the generated webfont kit.

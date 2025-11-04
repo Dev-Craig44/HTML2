@@ -1,7 +1,27 @@
+/* 9.) Make sure we copy and paste the font face rules at the top of our CSS file because they need to be loaded before any elements use them. */
+@font-face {
+  /* 10.) Change the font family name to match the file names  */
+  font-family: "opensans";
+  /* 11.) Type in the relative path to the font files */
+  src: url("font/open-sans/opensans-regular-webfont.woff2") format("woff2"),
+    url("font/open-sans/ opensans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 12.) Do the same for the bold font */
+@font-face {
+  font-family: "opensansbold";
+  src: url("font/open-sans/opensans-bold-webfont.woff2") format("woff2"),
+    url("font/open-sans/opensans-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   margin: 10px;
   /* 3.) Use inheritance to avoid repetition for the font stack */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "opensans", Arial, Helvetica, sans-serif;
 }
 
 /* 4.) Override the font stack for specific elements. times new roman is in quotes because it has spaces */
@@ -13,7 +33,7 @@ p {
   /* 1.) Make a font stack. A solid font stack provides fallbacks and the last font in the stack is used if all else fails. */
   /* font-family: Arial, Helvetica, sans-serif; */
   /* 5.) Override the font weight for specific elements. Use ctrl + space to see suggestions.s */
-  font-weight: bold;
+  font-weight: normal;
   /* 6.) Change the font style */
   font-style: italic;
   /* 7.) Change the font size */
