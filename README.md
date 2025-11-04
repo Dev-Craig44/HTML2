@@ -576,3 +576,12 @@ The art of creating beautiful, and easy-to-read text.
 - Using font services (e.g., Google Fonts)
 - Best practices for text size & spacing
 - Formatting text
+
+### Styling Fonts
+
+- We have three main categories of fonts:
+  - Serif: Fonts with small lines or strokes attached to the ends of larger strokes in letters `(e.g., Times New Roman, Georgia)`
+  - Sans-serif: Fonts without the small lines or strokes `(e.g., Avenir, Arial, Futura, Helvetica, Roboto)`
+  - Monospace: Fonts in which each character takes up the same amount of horizontal space `(e.g., Courier New, Consolas, Ubuntu)`
+
+These are what we would call web-safe fonts. These are fonts that are commonly installed on most devices.
