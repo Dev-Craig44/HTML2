@@ -614,3 +614,50 @@ These are what we would call web-safe fonts. These are fonts that are commonly i
 When we download the font zips from sites like Font Squirrel, we're going to use the webfont generator to create the webfont files we need.
 
 Upload the font files you have (TTF or OTF) to the webfont generator, select optimized for web, and download the generated webfont kit.
+
+### Flash of Unstyled Text (FOUT)
+
+When using custom web fonts, browsers may initially display text using a fallback font before the custom font loads, causing a "flash" of unstyled text. To mitigate this, you can use the `font-display` property in your `@font-face` declaration.
+
+#### Testing Font Loading Performance
+
+**DevTools Setup:**
+
+1. Open **DevTools** → **Network** tab
+2. Check **"Disable cache"** - simulates first-time visits on every refresh
+3. Use **Throttle options** to simulate slower network speeds and observe font loading behavior
+
+#### Font Display Options
+
+The `font-display` property controls how fonts are displayed during the loading process:
+
+- **`font-display: swap;`** ✅ **Recommended**
+
+  - Browser uses fallback font immediately
+  - Swaps to custom font once loaded
+  - Reduces FOUT impact on user experience
+
+- **`font-display: fallback;`**
+
+  - Uses fallback font if custom font doesn't load within a short period
+  - Ensures text remains readable without significant delays
+
+- **`font-display: optional;`**
+
+  - Uses fallback font if custom font doesn't load quickly
+  - Prioritizes performance and user experience over font fidelity
+
+- **`font-display: block;`** ❌ **Never Use**
+  - Forces browser to wait for custom font before displaying text
+  - Can cause blank/invisible text if font fails to load
+  - Poor user experience
+
+#### Example Implementation
+
+```css
+@font-face {
+  font-family: "CustomFont";
+  src: url("customfont.woff2") format("woff2"), url("customfont.woff") format("woff");
+  font-display: swap; /* Recommended for better UX */
+}
+```

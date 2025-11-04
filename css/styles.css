@@ -1,15 +1,18 @@
 @font-face {
   font-family: "opensans";
-  src: url("font/open-sans/opensans-regular-webfont.woff2") format("woff2"),
-    url("font/open-sans/ opensans-regular-webfont.woff") format("woff");
+  src: url("fonts/open-sans/opensans-regular-webfont.woff2") format("woff2"),
+    url("fonts/open-sans/ opensans-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  /* 1.) Use font-display to control font loading behavior */
+  /* If the font is not loaded within a certain time, the fallback font will be used */
+  font-display: fallback;
 }
 
 @font-face {
   font-family: "opensansbold";
-  src: url("font/open-sans/opensans-bold-webfont.woff2") format("woff2"),
-    url("font/open-sans/opensans-bold-webfont.woff") format("woff");
+  src: url("fonts/open-sans/opensans-bold-webfont.woff2") format("woff2"),
+    url("fonts /open-sans/opensans-bold-webfont.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
