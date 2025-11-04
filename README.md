@@ -517,9 +517,9 @@ visibility: hidden; /* Hides element but keeps reserved space */
 
 ---
 
-## Exercises
+### Exercises
 
-### 🧭 Navigation Bar
+#### 🧭 Navigation Bar
 
 **Objective**: Create a responsive navigation bar that adapts to different screen sizes.
 
@@ -538,7 +538,7 @@ visibility: hidden; /* Hides element but keeps reserved space */
 
 **View**: [Navigation Bar Exercise](exercises/navbar/index.html)
 
-### 📸 Photo Gallery
+#### 📸 Photo Gallery
 
 **Objective**: Build a responsive photo gallery with adaptive column layouts.
 
@@ -558,9 +558,21 @@ visibility: hidden; /* Hides element but keeps reserved space */
 
 **View**: [Photo Gallery Exercise](exercises/photo-gallery/index.html)
 
-### 🎯 How to Test
+#### 🎯 How to Test
 
 1. **Start Local Server**: `python3 -m http.server 8080`
 2. **Open**: [http://localhost:8080/exercises/](http://localhost:8080/exercises/)
 3. **Use DevTools**: F12 → Device toolbar → Test different screen sizes
 4. **Key Breakpoints**: 320px (mobile), 768px (tablet), 1024px (desktop)
+
+## 2. Typography
+
+### Intro
+
+The art of creating beautiful, and easy-to-read text.
+
+- Style fonts
+- Embedding custom fonts
+- Using font services (e.g., Google Fonts)
+- Best practices for text size & spacing
+- Formatting text
