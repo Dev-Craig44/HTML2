@@ -17,12 +17,10 @@
 
 body {
   margin: 10px;
-  /* 2.) Change main font to "Open Sans" which we got from Google Fonts */
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
 h1 {
-  /* 3.) Change h1 font to "Roboto" which we got from Google Fonts */
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
