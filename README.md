@@ -676,10 +676,21 @@ The `font-display` property controls how fonts are displayed during the loading 
 
 - All these services have subscription models or pay-as-you-go options depending on your needs.
 
-### Using Google Fonts
+#### Using Google Fonts
 
 1. Go to [Google Fonts](https://fonts.google.com)
 2. Browse and select the font(s) you want to use
 3. Click on the selected font to open its details page
 4. Choose which styles, they have something called variable fonts, which is a single font file that contains multiple styles.
 5. Copy the `<link>` tag provided by Google Fonts and paste it into the `<head>` section of your HTML document
+
+### System Font Stacks
+
+We can tell the browser to use the default font of the operating system on the user's device.
+
+#### Benefits
+
+- Can Boost Performance: System fonts are already installed on the user's device, so they load instantly without additional HTTP requests.
+- This means there will be no FOUT (Flash of Unstyled Text) because the font is already available.
+- Native Look and Feel: Using system fonts can help your website blend seamlessly with the user's operating system, providing a more native experience.
+- Overall: We provide a better experience for user. **Problem with approach** The default system font on each operating system is different, so your website may look different across devices.
