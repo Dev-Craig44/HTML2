@@ -694,3 +694,43 @@ We can tell the browser to use the default font of the operating system on the u
 - This means there will be no FOUT (Flash of Unstyled Text) because the font is already available.
 - Native Look and Feel: Using system fonts can help your website blend seamlessly with the user's operating system, providing a more native experience.
 - Overall: We provide a better experience for user. **Problem with approach** The default system font on each operating system is different, so your website may look different across devices.
+
+### Sizing Fonts
+
+#### Why Avoid Pixels?
+
+❌ **Don't use pixels** for font sizes because:
+- Pixels are not consistent across different devices and screen resolutions
+- Mac devices use **Retina Display** technology, allowing smaller pixels to fit more on screen
+- Creates accessibility issues for users who need larger text
+- Not responsive to user preferences or device capabilities
+
+#### Better Alternatives
+
+✅ **Use relative units instead:**
+- **`rem`**: Relative to root element font size (recommended)
+- **`em`**: Relative to parent element font size  
+- **`%`**: Percentage of parent element font size
+- **`vw/vh`**: Viewport-relative units for responsive typography
+
+#### Typography Scale Tool
+
+🔧 **[Type Scale](https://type-scale.com)** - Visual tool for:
+- Exploring different font size ratios
+- Previewing text at various sizes
+- Finding the right font size hierarchy for headings
+- Creating consistent typographic scales
+
+#### Example Implementation
+
+```css
+/* Good: Using relative units */
+html { font-size: 16px; } /* Base size */
+h1 { font-size: 2.5rem; }  /* 40px */
+h2 { font-size: 2rem; }    /* 32px */
+h3 { font-size: 1.5rem; }  /* 24px */
+p { font-size: 1rem; }     /* 16px */
+
+/* Avoid: Fixed pixel sizes */
+h1 { font-size: 40px; } /* Not responsive */
+```

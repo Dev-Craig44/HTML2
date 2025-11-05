@@ -19,10 +19,31 @@ body {
   margin: 10px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* 1.) Set the font size */
+  /* 1 X font size of the root element */
+  font-size: 1rem;
+}
+
+/* 4.) Set a rule for all heading elements so that we can override the font size for the heading element of our choice*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* 5.) Move the font family declaration here */
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 h1 {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  /* 2.) Make the font size larger */
+  font-size: 4.209rem;
+}
+
+/* 3.) Set a rule for a h2 element for comparison */
+h2 {
+  font-size: 3.157rem;
 }
 
 p {
@@ -30,4 +51,12 @@ p {
   font-style: normal;
   font-size: 1rem;
   color: #333;
+}
+
+/* We can assume that this is mobile first, so we can use media queries to adjust styles for larger screens. */
+
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 130%;
+  }
 }
