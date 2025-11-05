@@ -661,3 +661,25 @@ The `font-display` property controls how fonts are displayed during the loading 
   font-display: swap; /* Recommended for better UX */
 }
 ```
+
+### Font Services
+
+- Some of these fonts need licensing, and the licensing can cost a few hundred dollars for a website license. So this is where font services come in.
+
+- **Google Fonts** is a free font service that hosts hundreds of open-source fonts that you can easily embed into your website. ([google fonts](https://fonts.google.com))
+
+- **Adobe Fonts** (formerly Typekit) is a premium font service included with Adobe Creative Cloud subscriptions. It offers a vast library of high-quality fonts for web and desktop use. ([adobe fonts](https://fonts.adobe.com))
+
+- **Fonts.com** and **MyFonts** are other popular font services that provide both free and premium fonts for web use. They offer easy embedding options and licensing for commercial use. ([fonts.com](https://www.fonts.com), [myfonts](https://www.myfonts.com))
+
+- **Fontdeck** is another premium font service that offers a wide range of high-quality fonts for web use. It provides easy integration and licensing options for commercial projects. ([fontdeck](https://fontdeck.com))
+
+- All these services have subscription models or pay-as-you-go options depending on your needs.
+
+### Using Google Fonts
+
+1. Go to [Google Fonts](https://fonts.google.com)
+2. Browse and select the font(s) you want to use
+3. Click on the selected font to open its details page
+4. Choose which styles, they have something called variable fonts, which is a single font file that contains multiple styles.
+5. Copy the `<link>` tag provided by Google Fonts and paste it into the `<head>` section of your HTML document
