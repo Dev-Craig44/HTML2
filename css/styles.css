@@ -27,6 +27,9 @@ body {
 
   /* 2.) Adjust word spacing, this will adjust the space between words */
   /* word-spacing: 5px; */
+
+  /* 15.) Set directionality to right to left to impress our Jewish and Arabic users */
+  direction: rtl;
 }
 
 h1,
@@ -74,9 +77,11 @@ p {
   /* text-overflow: ellipsis; */
 
   /* 12.) Set column count for multi-column layout to 2 */
-  column-count: 2;
+  /* column-count: 2; */
+
   /* 13.) Control column gap */
-  column-gap: 4rem;
+  /* column-gap: 4rem; */
+
   /* 14.) Add a line between columns */
-  column-rule: 1px solid #eee;
+  /* column-rule: 1px solid #eee; */
 }

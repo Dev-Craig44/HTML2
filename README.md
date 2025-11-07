@@ -801,3 +801,92 @@ What we have in the html is breaking the law of proximity. Objects that are clos
   text-transform: uppercase;
 }
 ```
+
+### Formatting Text
+
+#### Alignment & Layout
+
+- **`text-align`**: Controls horizontal text alignment
+
+  - Values: `left`, `right`, `center`, `justify`
+  - Use `justify` sparingly - can create uneven spacing
+
+- **`text-indent`**: Controls first-line indentation
+  - Common values: `1em`, `2em`, `1rem`
+  - Tip: Use `p + p` selector for subsequent paragraphs only
+
+#### Text Styling
+
+- **`text-decoration`**: Adds visual decorations to text
+
+  - Values: `none`, `underline`, `line-through`, `overline`
+  - Shorthand: `text-decoration: underline wavy red;`
+
+- **`text-transform`**: Controls text capitalization
+  - Values: `none`, `uppercase`, `lowercase`, `capitalize`
+  - Great for headings and buttons
+
+#### Whitespace Control
+
+- **`white-space`**: Controls whitespace and line breaks
+  - `normal`: Default behavior, collapses whitespace
+  - `nowrap`: Prevents text wrapping
+  - `pre`: Preserves all whitespace (like `<pre>` tag)
+  - `pre-wrap`: Preserves whitespace but allows wrapping
+
+#### Multi-Column Layouts
+
+- **`column-count`**: Number of columns (e.g., `3`)
+- **`column-gap`**: Space between columns (e.g., `2rem`)
+- **`column-width`**: Optimal width per column (e.g., `250px`)
+- **`column-rule`**: Visual separator between columns
+
+#### Text Direction
+
+- **`direction`**: Controls text reading direction
+  - `ltr`: Left-to-right (default for English)
+  - `rtl`: Right-to-left (for Arabic, Hebrew)
+
+#### Example Implementation
+
+```css
+/* Text alignment */
+.centered-text {
+  text-align: center;
+}
+.justified-text {
+  text-align: justify;
+}
+
+/* Text styling */
+.uppercase-heading {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.decorated-link {
+  text-decoration: underline;
+  text-decoration-color: blue;
+  text-decoration-style: wavy;
+}
+
+/* Whitespace control */
+.no-wrap {
+  white-space: nowrap;
+}
+.preserve-formatting {
+  white-space: pre-wrap;
+}
+
+/* Multi-column layout */
+.article-columns {
+  column-count: 2;
+  column-gap: 3rem;
+  column-rule: 1px solid #ddd;
+}
+
+/* Paragraph indentation (avoid first paragraph) */
+p + p {
+  text-indent: 1.5rem;
+}
+```
