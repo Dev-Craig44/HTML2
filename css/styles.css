@@ -62,11 +62,21 @@ p {
   /* text-transform: capitalize; */
 
   /* 8.) Set white-space to prevent text from overflowing */
-  white-space: nowrap;
+  /* white-space: nowrap; */
+
   /* 9.) Set a border to see where our container ends */
-  border: 1px solid red;
+  /* border: 1px solid red; */
+
   /* 10.) Set overflow to hidden to prevent content from overflowing */
-  overflow: hidden;
+  /* overflow: hidden; */
+
   /* 11.) Use the text-overflow property to add an ellipsis (...) for overflowing text */
-  text-overflow: ellipsis;
+  /* text-overflow: ellipsis; */
+
+  /* 12.) Set column count for multi-column layout to 2 */
+  column-count: 2;
+  /* 13.) Control column gap */
+  column-gap: 4rem;
+  /* 14.) Add a line between columns */
+  column-rule: 1px solid #eee;
 }
