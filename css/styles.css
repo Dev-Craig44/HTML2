@@ -21,7 +21,6 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  max-width: 50ch;
   /* 1.) Set letter spacing to 1rem */
   /* This came out so wide, this is why we don't use rem we should use px instead */
   /* letter-spacing: 1px; */
@@ -46,12 +45,28 @@ h1 {
 /* 3.) Set the max-width for paragraphs */
 /* ch is a unit representing the width of the "0" (zero) character in the current font */
 
-p + p {
+p {
+  width: 50ch;
   /* 4.) Set the text alignment for paragraphs */
   /* I wouldn't use `justify` because you'll end up with uneven spacing */
   /* text-align: center; */
 
   /* 5.) Set the text indentation for paragraphs */
   /* Most times you don't want to indent the first paragraph after a heading, so we should use p + p (adjacent sibling selector) to only indent paragraphs that follow other paragraphs */
-  text-indent: 1rem;
+  /* text-indent: 1rem; */
+
+  /* 6.) Set the text decoration for paragraphs to underline which could be useful for links and emphasis */
+  /* text-decoration: underline; */
+
+  /* 7.) Use text-transform to set the text to capitalize which is pretty useful for headings because it capitalizes the first letter of each word */
+  /* text-transform: capitalize; */
+
+  /* 8.) Set white-space to prevent text from overflowing */
+  white-space: nowrap;
+  /* 9.) Set a border to see where our container ends */
+  border: 1px solid red;
+  /* 10.) Set overflow to hidden to prevent content from overflowing */
+  overflow: hidden;
+  /* 11.) Use the text-overflow property to add an ellipsis (...) for overflowing text */
+  text-overflow: ellipsis;
 }
