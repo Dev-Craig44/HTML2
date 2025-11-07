@@ -757,3 +757,47 @@ h1 {
   - `margin`: Controls the space outside of elements, separating them from other elements
 
 What we have in the html is breaking the law of proximity. Objects that are closer are perceived to be related.
+
+### Horizontal Spacing
+
+#### Key Properties
+
+**Character & Word Spacing:**
+
+- **`letter-spacing`**: Controls space between individual characters
+- **`word-spacing`**: Controls space between words in text
+- **`width`**: Controls overall width of text blocks (affects line breaks)
+
+#### Testing with DevTools
+
+🔧 **Live Testing**:
+
+1. Inspect any text element in DevTools
+2. Adjust properties in real-time:
+   - `letter-spacing`: Try values like `0.1em`, `0.2em`
+   - `word-spacing`: Try values like `0.2em`, `0.5em`
+   - `width`: Adjust to see line break changes
+
+#### Readability Guidelines
+
+📏 **Optimal Line Length**: **50-70 characters per line**
+
+- Too short: Creates choppy reading rhythm
+- Too long: Hard to track from line to line
+- Use `width` or `max-width` to control line length
+
+#### Example Implementation
+
+```css
+.readable-text {
+  width: 65ch; /* ~65 characters wide */
+  letter-spacing: 0.025em; /* Slight character spacing */
+  word-spacing: 0.1em; /* Small word spacing */
+  line-height: 1.6; /* Good vertical rhythm */
+}
+
+.spaced-heading {
+  letter-spacing: 0.1em; /* More dramatic for headings */
+  text-transform: uppercase;
+}
+```

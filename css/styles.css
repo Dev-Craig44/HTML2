@@ -20,9 +20,13 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1rem;
-  /* 2.) The rule for line height is 1.5 x the font size */
-  /* Make sure not to use rem because if we choose a different font size later, the line height will not adjust accordingly */
   line-height: 1.5;
+  /* 1.) Set letter spacing to 1rem */
+  /* This came out so wide, this is why we don't use rem we should use px instead */
+  /* letter-spacing: 1px; */
+
+  /* 2.) Adjust word spacing, this will adjust the space between words */
+  /* word-spacing: 5px; */
 }
 
 h1,
@@ -34,8 +38,13 @@ h6 {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
-/* 1.) Set the margin for the heading to fix the law of proximity rule we learned about */
-
 h1 {
   margin: 3rem 0 1rem;
+}
+
+/* Set the max-width for paragraphs */
+/* ch is a unit representing the width of the "0" (zero) character in the current font */
+
+p {
+  max-width: 40ch;
 }
