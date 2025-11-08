@@ -1,3 +1,67 @@
+body {
+  color: #222;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  padding: 3rem;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 img {
   max-width: 100%;
+}
+
+.lead {
+  font-family: "Domine", serif;
+  font-style: italic;
+  font-size: 2.2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 6.1rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+h3 {
+  font-size: 3.906rem;
+}
+
+h4 {
+  font-size: 3.125rem;
+}
+
+h5 {
+  font-size: 2.5rem;
+}
+
+h6 {
+  font-size: 2rem;
+}
+
+ol li {
+  margin-bottom: 2rem;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }

@@ -890,3 +890,47 @@ p + p {
   text-indent: 1.5rem;
 }
 ```
+
+### Exercise: � Recipe Blog Page
+
+**Objective**: Create a well-formatted recipe blog page demonstrating typography principles and responsive design.
+
+**Font Requirements**:
+
+- Use **Google Fonts** - 2 sans-serif fonts + 1 serif font (italic)
+- **Serif font** (italic): Lead paragraph before image
+- **Sans-serif fonts**: Body text and headings
+- Base font size: **62.5%** for easier rem calculations
+- Use **[Type Scale](https://type-scale.com)** to determine heading sizes (h1-h6)
+
+**Container Requirements**:
+
+- Max width: **1140px**
+- Horizontal margin: **auto** (centers container with equal left/right spacing)
+
+**Page Elements**:
+
+- **Proper heading hierarchy**: One `<h1>` per page, no skipped headings
+- **Lead paragraph**: Slightly larger than body text
+- **Responsive image**: 100% width from [Unsplash](https://unsplash.com/photos/C1Q3qOTlegg)
+- **Mobile-first**: Ensure everything looks good on smaller screens
+- **Compare with solution**: Investigate missed styles and their impact
+
+**Features to Implement**:
+
+- Google Fonts integration with proper font stack
+- Semantic HTML structure with heading hierarchy
+- Custom typography with lead paragraph styling
+- Responsive image sizing (`width: 100%`)
+- Optimal line length and spacing
+- Centered container layout
+
+**Emmet Shorthand**:
+
+```
+.container>h1{Sweet Potato and Kale Bowl}+p.lead>lorem20^^img[src="images/recipe.jpg"][alt=""]^h2{Ingredients}+h3{For the sweet potato}+ul>li*4>lorem1+strong{ingredient}^^^h3{For the kale}+ul>li*3>lorem1+strong{ingredient}^^^h2{Instructions}+ol>li*3>lorem15
+```
+
+**View**: [Recipe Blog Exercise](exercises/recipe-blog/index.html)
+
+### Exercise: �📰 Stylish Blog Post
