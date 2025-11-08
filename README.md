@@ -933,4 +933,155 @@ p + p {
 
 **View**: [Recipe Blog Exercise](exercises/recipe-blog/index.html)
 
-### Exercise: �📰 Stylish Blog Post
+---
+
+## Typography Summary
+
+### Terms
+
+- **Browser cache**: Permanent storage on disk where browsers store web page assets
+- **Flash of Invisible Text (FOIT)**: Browser hides text while downloading custom font
+- **Flash of Unstyled Text (FOUT)**: Browser shows fallback font then swaps to custom font
+- **Font services**: Platforms providing access to thousands of fonts (e.g., Google Fonts)
+- **Font stack**: Multiple fonts listed as fallbacks in CSS
+- **Law of proximity**: Objects that are closer are perceived to be related
+- **Monospace fonts**: Fonts where each character has equal width (used for code)
+- **Query string parameters**: URL parameters used to prevent caching (e.g., `?v=1`)
+- **Retina display**: High-density displays that fit more pixels on screen
+- **Sans-serif fonts**: Modern, warm fonts without decorative strokes
+- **Serif fonts**: Professional fonts with decorative lines/strokes at character edges
+- **System fonts**: Default fonts provided by operating systems
+- **Throttling**: Simulating slow network connections in DevTools
+- **Web safe fonts**: Fonts commonly installed on most devices
+
+### Key Concepts
+
+**Typography Importance**
+
+- Typography is the art of creating beautiful and easy-to-read text
+- 95% of web content is text - proper typography is essential
+- Must ensure text is easy to read and visually appealing on all screen sizes
+
+**Font Categories**
+
+- **Serif**: Professional and serious (e.g., Times New Roman, Georgia)
+- **Sans-serif**: Modern, warm, and friendly (e.g., Arial, Helvetica, Roboto)
+- **Monospace**: Equal-width characters for displaying code (e.g., Courier, Consolas)
+
+**Best Practices**
+
+- Default body text color (#000) is too harsh - use dark grey instead
+- Use `font-family` with font stacks containing multiple fallback fonts
+- Embed custom fonts using modern formats (WOFF, WOFF2) for better compression
+- Convert font files to WOFF format at [Font Squirrel](https://fontsquirrel.com)
+
+**Custom Fonts**
+
+- Register custom fonts using `@font-face` rule
+- WOFF and WOFF2 formats are recommended (more compressed, faster downloads)
+- Be aware of FOUT/FOIT when custom fonts load
+- Use `font-display` property to control font loading behavior
+
+**Font Services**
+
+- Provide access to thousands of fonts with zero or minimal cost
+- **Google Fonts** is the most popular free service
+- Fonts and `@font-face` rules served from provider's servers
+- Eliminates need to host font files yourself
+
+**System Font Stack**
+
+- Uses default OS fonts for better performance
+- No font downloads needed - eliminates FOUT/FOIT
+- Page looks familiar to users (same as their device)
+- Drawback: Font varies across different devices
+
+**Sizing & Spacing**
+
+- Use `rem` units for font sizes (relative to root element)
+- Set `html { font-size: 62.5%; }` so 1rem = 10px for easier calculations
+- Use media queries to resize base font - all elements recalculate automatically
+- Use `rem` for vertical margins to maintain consistency
+
+**Heading Hierarchy**
+
+- Top margin should be greater than bottom margin
+- Separates heading from previous content, connects to following content
+- Follows the **law of proximity** principle
+
+**Line Height**
+
+- Use unitless value around **1.5** for optimal readability
+- Value multiplies by element's font size automatically
+- No need to update if font size changes
+
+**Horizontal Spacing**
+
+- **`letter-spacing`**: Space between characters
+- **`word-spacing`**: Space between words
+- **`width`**: Controls text block width (affects line breaks)
+- Apply negative letter-spacing to headings for compact look
+
+**Optimal Line Length**
+
+- Ideal: **60-70 characters per line**
+- Use `width: 50ch` to achieve this
+- `ch` unit = width of "0" character
+- 50 zeros ≈ 60-70 characters (accounting for narrow characters like i, 1)
+
+**Development Tools**
+
+- **Network Throttling**: Simulate slow connections in DevTools
+- **Browser Cache**: Can be cleared to test fresh page loads
+- **Network Tab**: Monitor font file downloads and performance
+
+---
+
+### Exercise: � Stylish Blog Post
+
+---
+
+### CSS Cheat Sheet
+
+#### Styling Fonts
+
+```css
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1rem;
+font-weight: bold;
+font-style: italic;
+```
+
+#### Vertical Spacing
+
+```css
+margin: 3rem 0 1rem;  /* top, left/right, bottom */
+line-height: 1.5;
+```
+
+#### Horizontal Spacing
+
+```css
+letter-spacing: -1px;
+word-spacing: 2px;
+width: 50ch;
+```
+
+#### Formatting Text
+
+```css
+text-align: center;
+text-indent: 1rem;
+text-decoration: underline;
+text-transform: uppercase;
+white-space: nowrap;
+direction: rtl;  /* right-to-left */
+```
+
+#### Multi-column Text
+
+```css
+column-count: 2;
+column-gap: 2rem;
+column-rule: 3px dotted #999;
+```
